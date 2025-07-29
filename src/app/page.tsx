@@ -36,8 +36,8 @@ export default function Home() {
         top: `${top}%`,
         left: `${left}%`,
         transform: `rotate(${rotate}deg) scale(${scale})`,
-        position: "absolute",
-        pointerEvents: "none", // leaves dont interfere with clicks
+        position: "absolute" as const,
+        pointerEvents: "none" as const, // use const assertion
       };
     });
   }, []);
